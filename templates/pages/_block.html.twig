@@ -1,0 +1,45 @@
+{% if block.type == 'html' %}
+    {% if block.body %}
+        {{ block.body | raw }}
+    {% endif %}
+{% endif %}
+
+{% if block.type == 'slider' %}
+    {% if block.gallery | length > 0 %}
+        {% for img in block.gallery.galleryHasMedias %}
+            <img src={% path img.media, 'reference' %}>
+        {% endfor %}
+    {% endif %}
+{% endif %}
+
+{% if block.type == 'gallery' %}
+    {% if block.gallery | length > 0 %}
+        {% for img in block.gallery.galleryHasMedias %}
+            <img src={% path img.media, 'reference' %}>
+        {% endfor %}
+    {% endif %}
+{% endif %}
+
+{% if block.type == 'image' %}
+    {% if block.media %}
+        <img src={% path block.media, 'reference' %}>
+    {% endif %}
+{% endif %}
+
+{% if block.type == 'form' %}
+    {% if block.form %}
+        <form>
+        {% for field in block.form.fields %}
+
+            {% if field.type == 'text' %}
+                <input type="text" placeholder="{{ field.placeholder }}">
+            {% endif %}
+
+            {% if field.type == 'textarea' %}
+                <textarea placeholder="{{ field.placeholder }}"></textarea>
+            {% endif %}
+
+        {% endfor %}
+        </form>
+    {% endif %}
+{% endif %}

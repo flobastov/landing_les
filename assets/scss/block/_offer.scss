@@ -1,0 +1,48 @@
+.b-offer {
+  padding: 20px 0;
+  background-color: rgba(37,84,32,.8);
+  position: relative;
+  & .b-line {
+    top: 75px;
+  }
+}
+.b-offer-form {
+  margin: 0 auto;
+  max-width: 400px;
+  border-radius: 5px;
+  background-color: rgba(149,193,31,.25);
+  padding: 30px 45px;
+  & .b-form {
+    &__title {
+      color: flexy-color(white);
+    }
+  }
+  & .b-input {
+    &__field {
+      background-color: rgba(255,255,255,.25);
+      border: 0;
+    }
+    &__label {
+      color: flexy-color(white);
+    }
+  }
+  & .b-checkbox {
+    &__custom {
+      background-color: rgba(255,255,255,.25);
+      border: 0;
+    }
+    &__label, &__label a {
+      color: rgba(255,255,255,.26);
+    }
+  }
+  & .b-input-submit {
+    max-width: 239px;
+    margin: 0 auto;
+    & input {
+      background-color: flexy-color(green);
+    }
+  }
+  & .b-space {
+    height: 10px;
+  }
+}

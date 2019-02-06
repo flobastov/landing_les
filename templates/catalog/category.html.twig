@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ category.name }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ category.name }}</h1>
+
+    {% if products | length > 0 %}
+        {% for p in products %}
+            <div>
+                <p>{{ p.name }}</p>
+                <p>{{ p.price }}</p>
+                <p>{{ p.body | raw }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h3>В этой категории пока что нет товаров</h3>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,75 @@
+<section class="b-hero">
+    <div class="b-space b-visible_medium_up"></div>
+    <div class="b-space b-visible_medium_up"></div>
+    <div class="b-space b-visible_large_up"></div>
+    <div class="b-wrapper">
+
+        <div class="b-row">
+            <div class="b-col b-col_small_12 b-col_large_8">
+                <div class="b-content-title b-content-title--gradient h1">Купить домокомплект<br>
+                    из оцилиндрованного бревна<br>
+                    по ценам производителя</div>
+                <div class="b-space"></div>
+                <div class="b-space b-visible_medium_up"></div>
+                <div class="b-space b-visible_large_up"></div>
+                <div class="b-block-grid b-block-grid_small_2">
+                    {% set features = [
+                        {'icon':'like','title':'Собственное\nпроизводство\nс 8-летней историей'},
+                        {'icon':'stopwatch','title':'Быстрые\nсроки производства\nдо 30 дней'},
+                        {'icon':'tree','title':'Собственная\nсырьевая база'},
+                        {'icon':'saw','title':'Распиловка\nна станках\nс дисковым пилением'}
+                    ] %}
+                    {% for feature in features %}
+                    <div class="b-block-grid__item">
+                        <div class="b-hero-feature">
+                            <div class="b-hero-feature__img">
+                                <i class="sprite sprite-icon-{{ feature.icon }}"></i>
+                            </div>
+                            <div class="b-hero-feature__title">{{ feature.title | striptags(true) | escape | nl2br }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="b-space b-hide_large_up"></div>
+            </div>
+            <div class="b-col b-col_small_12 b-col_large_4">
+                <div class="b-hero-form">
+                    <form action="" method="post" class="b-form simple-form">
+                        <div class="b-form__title h3">Получите специальные<br>
+                            условия сотрудничества
+                        </div>
+                        <div class="b-error">
+                            <div class="b-wrapper"></div>
+                        </div>
+                        <div class="b-flashes">
+                            <div class="b-wrapper"></div>
+                        </div>
+                        <div class="b-space"></div>
+                        <div class="b-form__elem b-input">
+                            <input type="text" name="name" id="name" class="b-input__field js-field">
+                            <label for="name" class="b-input__label">Имя*</label>
+                        </div>
+                        <div class="b-form__elem b-input">
+                            <input type="tel" name="phone" id="phone" class="b-input__field js-field">
+                            <label for="phone" class="b-input__label">Телефон*</label>
+                        </div>
+                        <div class="b-form__elem b-checkbox">
+                            <input type="checkbox" name="agree" id="agree" class="b-checkbox__field">
+                            <label for="agree" class="b-checkbox__label"><span class="b-checkbox__custom"></span>Я согласен на обработку персональных данных на условиях и для целей определенных
+                                <a href="./uploads/policy.pdf" download>Политикой конфиденциальности</a></label>
+                        </div>
+                        <div class="b-space"></div>
+                        <div class="b-form__elem b-input-submit">
+                            <input type="submit" value="Оставить заявку на расчет">
+                            <input type="hidden" name="form_name" value="Получите специальные условия сотрудничества">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="b-space"></div>
+    <div class="b-space b-visible_medium_up"></div>
+    <div class="b-space b-visible_large_up"></div>
+</section>

@@ -1,0 +1,26 @@
+<section class="b-about" id="about">
+    {#<div class="b-line"><img src="./assets/images/line-bg.png" alt="line"></div>#}
+    <div class="b-space"></div>
+    <div class="b-space b-visible_medium_up"></div>
+    <div class="b-wrapper">
+        <div class="b-block-grid b-block-grid_small_1 b-block-grid_large_2">
+            <div class="b-block-grid__item">
+                <div class="b-content-title h1">О нас</div>
+                <div class="b-space"></div>
+                <div class="b-space b-visible_medium_up"></div>
+                <div class="b-content-desc">
+                    {{ blocks.about_company.body | raw }}
+                </div>
+            </div>
+            <div class="b-block-grid__item">
+                <div class="b-video">
+                    <div class="b-video__img b-bg" style="background-image: url('./assets/images/movie-bg.jpg')"></div>
+                    <div id="video_1" class="b-video__player video-youtube__content_hide-origin-play-btn"></div>
+                    <button type="button" class="b-video__play-btn"> &gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-space"></div>
+    <div class="b-space b-visible_medium_up"></div>
+</section>

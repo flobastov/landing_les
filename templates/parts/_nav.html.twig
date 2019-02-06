@@ -1,0 +1,16 @@
+<nav class="b-nav">
+    <ul class="b-nav__list">
+        {% set items = [
+            {'title':'Продукция', 'href':'products'},
+            {'title':'О компании', 'href':'about'},
+            {'title':'Преимущества', 'href':'feature'},
+            {'title':'Схема работы', 'href':'how'},
+            {'title':'Контакты', 'href':'contacts'}
+        ] %}
+        {% for item in items %}
+        <li class="b-nav__item">
+            <a href="#{{ item.href }}" data-title="{{ item.title }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

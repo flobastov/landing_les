@@ -1,0 +1,33 @@
+.b-modal {
+  &__cl-btn {
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 18px;
+    opacity: .18;
+    top: 10px;
+    right: 10px;
+    line-height: 1;
+    text-align: center;
+    transition: .2s ease;
+    color: flexy-color(black);
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &--coop {
+    max-width: 712px;
+    & .b-form {
+      padding: 40px;
+    }
+    & .b-input-submit {
+      max-width: 189px;
+      margin: 0 auto;
+    }
+    & .b-checkbox {
+      &__label {
+        hyphens: auto;
+      }
+    }
+  }
+}

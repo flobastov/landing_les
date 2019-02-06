@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ page.title }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ page.title }}</h1>
+
+    {% if page.blocks | length > 0 %}
+
+        {% for block in page.blocks %}
+
+            {% include 'pages/_block.html.twig' with {'block': block } %}
+
+        {% endfor %}
+
+    {% endif %}
+
+    <div>
+
+    </div>
+{% endblock %}

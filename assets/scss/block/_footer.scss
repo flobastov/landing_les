@@ -1,0 +1,9 @@
+.b-footer {
+  padding: 42px 0;
+  text-align: center;
+  &__palax {
+    color: rgba(255,255,255,.2);
+    font-size: flexy-size(medium);
+    text-decoration: none;
+  }
+}

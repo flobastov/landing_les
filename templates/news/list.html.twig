@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Новости
+{% endblock %}
+
+{% block content %}
+
+    <h1>Новости</h1>
+
+    {% if news|length > 0 %}
+
+        {% for post in news %}
+            <div>
+                <h2>{{ post.title }}</h2>
+                <h3>{{ post.category.name }}</h3>
+                <p>{{ post.updatedAt|date }}</p>
+                <a href="{{ path('news_show', {'slug': post.slug }) }}">Подробнее</a>
+            </div>
+        {% endfor %}
+
+    {% else %}
+        <p>Пока нет новостей</p>
+    {% endif %}
+
+{% endblock %}

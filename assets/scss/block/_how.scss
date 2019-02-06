@@ -1,0 +1,54 @@
+.b-how {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  @include flexy-breakpoint(medium) {
+    &__row {
+      max-width: none;
+      margin: 0 -12px;
+      justify-content: center;
+    }
+  }
+}
+.b-how-item {
+  display: flex;
+  color: flexy-color(green);
+  font-weight: 800;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+  &__icon {
+    max-width: 78px;
+    width: 100%;
+    flex: 1 0 auto;
+    height: 78px;
+    border-radius: 6px;
+    border: 1px solid flexy-color(orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    padding-left: 24px;
+    display: flex;
+    align-items: flex-start;
+  }
+  &__num {
+    font-size: 49px;
+    line-height: 40px;
+  }
+  &__title {
+    line-height: 1.2;
+    font-size: flexy-size(large);
+    padding-left: 20px;
+  }
+  @include flexy-breakpoint(medium) {
+    padding: 0 12px 60px;
+    min-width: 360px;
+    &__title {
+      white-space: nowrap;
+    }
+  }
+}

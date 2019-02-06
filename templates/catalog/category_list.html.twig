@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Каталог
+{% endblock %}
+
+{% block content %}
+    <h1>Каталог</h1>
+
+    {% if categories | length > 0 %}
+        {% for c in categories %}
+            <div>
+                <p>
+                    <a href="{{ path('product_category', {'slug':c.slug}) }}">{{ c.name }}</a>
+                </p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h3>Пока что не создано категорий</h3>
+    {% endif %}
+
+{% endblock %}

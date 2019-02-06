@@ -1,0 +1,33 @@
+.b-feature-item {
+  margin-bottom: 30px;
+  &__title {
+    color: flexy-color(green);
+    font-size: flexy-size(large);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+  &__content {
+    display: flex;
+  }
+  &__icon {
+    max-width: 102px;
+    width: 100%;
+    flex: 1 0 auto;
+    height: 102px;
+    border-radius: 6px;
+    border: 1px solid flexy-color(orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__desc {
+    padding-left: 16px;
+    line-height: 1.2;
+  }
+  &__num {
+    color: flexy-color(green);
+    font-weight: 700;
+  }
+}

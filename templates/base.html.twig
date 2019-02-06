@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}ПК "Лесоруб"{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+
+        <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
+        <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon-16x16.png') }}">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+
+    </head>
+    <body>
+
+    {{ render(controller('App\\Controller\\HomeController::showHeader')) }}
+    <div class="b-content">
+        {% block content %}{% endblock content %}
+    </div>
+    {{ render(controller('App\\Controller\\HomeController::showFooter')) }}
+
+        <script src="{{ asset('assets/js/app.js') }}"></script>
+        <script>
+
+            ymaps.ready(prodMap);
+            ymaps.ready(officeMap);
+
+            function prodMap() {
+                var myMap = new ymaps.Map(
+                    'production-map',
+                    {
+                        center: [59.179574, 50.709880], // Порядок по умолчнию: «широта, долгота».
+                        zoom: 15, // от 0 (весь мир) до 19.
+                        controls: [],
+                    },
+                    {
+                        searchControlProvider: 'yandex#search',
+                    }
+                    ),
+                    mark = new ymaps.Placemark([59.179574, 50.709880], {}, {
+                        iconLayout: 'default#image',
+                        iconImageHref: './assets/images/map-marker.png',
+                        iconImageSize: [35, 49],
+                        iconImageOffset: [-17, -49]
+                    });
+
+                myMap.geoObjects.add(mark);
+                myMap.behaviors.disable('scrollZoom');
+            };
+            function officeMap() {
+                var myMap = new ymaps.Map(
+                    'office-map',
+                    {
+                        center: [58.615877, 49.683860], // Порядок по умолчнию: «широта, долгота».
+                        zoom: 15, // от 0 (весь мир) до 19.
+                        controls: [],
+                    },
+                    {
+                        searchControlProvider: 'yandex#search',
+                    }
+                    ),
+                    mark = new ymaps.Placemark([58.615877, 49.683860], {}, {
+                        iconLayout: 'default#image',
+                        iconImageHref: './assets/images/map-marker.png',
+                        iconImageSize: [35, 49],
+                        iconImageOffset: [-17, -49]
+                    });
+
+                myMap.geoObjects.add(mark);
+                myMap.behaviors.disable('scrollZoom');
+            };
+        </script>
+
+    </body>
+</html>

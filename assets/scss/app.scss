@@ -1,0 +1,47 @@
+//flexy-framework
+@import '../node_modules/flexy-framework/src/defaults';
+@import 'settings';
+@import '../node_modules/flexy-framework/src/flexy';
+@import './vendor/block-grid';
+//font-awesome
+@import '../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+//iziModal
+@import 'vendor/iziModal';
+//hamburger
+@import 'vendor/humburger/hamburger';
+@import 'vendor/humburger/ham-spin';
+
+@import 'font/opensans';
+
+@import 'mixin/adaptive-font';
+@import 'mixin/order';
+
+@import 'global';
+@import '404_page';
+
+/* BLOCKS */
+@import 'block/content';
+@import 'block/map';
+@import 'block/form';
+@import 'block/tabs';
+@import 'block/modal';
+@import 'block/btn';
+@import 'block/header';
+@import 'block/error';
+@import 'block/flashes';
+@import 'block/hero';
+@import 'block/sprite';
+@import 'block/nav';
+@import 'block/products';
+@import 'block/table';
+@import 'block/line';
+@import 'block/about';
+@import 'block/video';
+@import 'block/feature';
+@import 'block/offer';
+@import 'block/how';
+@import 'block/contacts';
+@import 'block/footer';

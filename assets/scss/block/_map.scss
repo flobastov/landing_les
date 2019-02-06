@@ -1,0 +1,8 @@
+.b-map {
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  @include flexy-breakpoint(large) {
+    height: 502px;
+  }
+}

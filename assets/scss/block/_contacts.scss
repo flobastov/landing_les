@@ -1,0 +1,42 @@
+.b-contacts {
+  &__wrapper {
+    background-color: rgba(149,193,31,.15);
+    padding: 0 36px;
+  }
+  @include flexy-breakpoint(large) {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 736px;
+    }
+  }
+}
+.b-contacts-list {
+  &__title {
+    color: flexy-color(green);
+    font-size: flexy-size(large);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+    line-height: 1;
+    padding-left: 24px;
+  }
+  & ul {
+    list-style: none;
+    & li {
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 14px;
+      & i {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        color: flexy-color(green);
+      }
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
+}

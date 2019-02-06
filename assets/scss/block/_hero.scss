@@ -1,0 +1,36 @@
+.b-hero-feature {
+  text-align: center;
+  &__img {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-size: flexy-size(large);
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 1px 1px 1px #000;
+  }
+  @include flexy-breakpoint(medium) {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    &__img {
+      margin: 0;
+    }
+    &__title {
+      padding-left: 24px;
+    }
+  }
+}
+.b-hero-form {
+  padding: 34px 45px 24px 45px;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,.72);
+  max-width: 400px;
+  margin: 0 auto;
+  & .b-space {
+    height: 10px;
+  }
+}

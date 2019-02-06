@@ -1,0 +1,87 @@
+<section class="b-products" id="products">
+    {#<div class="b-line"><img src="./assets/images/line-bg.png" alt="line"></div>#}
+    <div class="b-wrapper">
+        <div class="b-content-title b-content-title--center h1">Мы предлагаем следующую продукцию</div>
+        <div class="b-space"></div>
+        <div class="b-space b-visible_large_up"></div>
+        <div class="b-block-grid b-block-grid_small_1 b-block-grid_large_2">
+            <div class="b-block-grid__item b-order_small_1 b-order_large_0">
+                <div class="b-product-figure">
+                    <div class="b-product-figure__img b-bg"
+                         style="background-image: url('./assets/images/img-1.jpg')"></div>
+                    <div class="b-space"></div>
+                    <a class="b-btn__send b-product-figure__btn b-btn b-btn--green"
+                       data-form-name="Заказать оцилиндрованное бревно">Заказать оцилиндрованное бревно</a>
+                </div>
+            </div>
+            <div class="b-block-grid__item b-order_small_0 b-order_large_1">
+                <div class="b-content-title h2">Оцилиндрованное бревно</div>
+                <div class="b-space"></div>
+                {{ blocks.product_round_log.body | raw }}
+            </div>
+        </div>
+        <div class="b-space"></div>
+        <div class="b-tabs" data-tab-mobile>
+            <div class="b-tabs__header">
+                <div class="b-content-title h2">Пиломатериалы</div>
+                <div class="b-tabs__active-tab"></div>
+                <div class="b-tabs__links">
+                    <a href="#" class="b-tabs__tab is-active" data-tab="#obreznoy">Обрезной пиломатериал естественной
+                        влажности</a>
+                    <a href="#" class="b-tabs__tab" data-tab="#vagonka">Вагонка</a>
+                    <a href="#" class="b-tabs__tab" data-tab="#doska">Доска пола</a>
+                    <a href="#" class="b-tabs__tab" data-tab="#blockhaus">Блокхаус</a>
+                    <a href="#" class="b-tabs__tab" data-tab="#oldbrus">Имитация строганного бруса</a>
+                </div>
+            </div>
+            <div class="b-space"></div>
+            <div class="b-tabs__container">
+                <div class="b-tabs__content is-active" id="obreznoy">
+                    <div class="b-block-grid b-block-grid_small_1 b-block-grid_large_2">
+                        <div class="b-block-grid__item">
+                            {{ blocks.product_edged_lumber.body | raw }}
+                        </div>
+                        <div class="b-block-grid__item">
+                            <div class="b-product-figure b-product-figure--right">
+                                <div class="b-product-figure__img b-bg"
+                                     style="background-image: url('./assets/images/img-2.jpg')"></div>
+                                <div class="b-space"></div>
+                                <a class="b-btn__send b-product-figure__btn b-btn b-btn--green"
+                                   data-form-name="Заказать пиломатериал естественной важности">Заказать пиломатериал естественной важности</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-tabs__content" id="vagonka">
+                    Контент 2й вкладки
+                </div>
+                <div class="b-tabs__content" id="doska">
+                    Контент 3й вкладки
+                </div>
+                <div class="b-tabs__content" id="blockhaus">
+                    Контент 4й вкладки
+                </div>
+                <div class="b-tabs__content" id="oldbrus">
+                    Контент 5й вкладки
+                </div>
+            </div>
+        </div>
+        <div class="b-space"></div>
+        <div class="b-block-grid b-block-grid_small_1 b-block-grid_large_2">
+            <div class="b-block-grid__item b-order_small_1 b-order_large_0">
+                <div class="b-product-figure">
+                    <div class="b-product-figure__img b-bg"
+                         style="background-image: url('./assets/images/img-3.jpg')"></div>
+                    <div class="b-space"></div>
+                    <a class="b-btn__send b-product-figure__btn b-btn b-btn--green"
+                       data-form-name="Заказать рубленное бревно">Заказать рубленное бревно</a>
+                </div>
+            </div>
+            <div class="b-block-grid__item b-order_small_0 b-order_large_1">
+                <div class="b-content-title h2">рубленное бревно</div>
+                <div class="b-space"></div>
+                {{ blocks.product_chopped_log.body | raw }}
+            </div>
+        </div>
+    </div>
+</section>

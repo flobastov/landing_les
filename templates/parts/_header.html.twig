@@ -1,0 +1,31 @@
+<header class="b-header">
+    <picture class="b-header__img">
+        <source media="(min-width: 992px)" srcset="./assets/images/header-bg-large.png">
+        <source media="(min-width: 769px)" srcset="./assets/images/header-bg-medium.png">
+        <img src="./assets/images/header-bg-small.png" alt="header-bg">
+    </picture>
+    <div class="b-wrapper">
+
+        <div class="b-header__row">
+            <div class="b-header-logo">
+                <div class="b-header-logo__img">
+                    <img src="./assets/images/logo.png" alt="logo">
+                </div>
+                <div class="b-header-logo__title">Производство оцилиндрованного бревна и пиломатериала</div>
+            </div>
+            <div class="b-header-contacts">
+                <div class="b-header-contacts__mail">
+                    <a class="b-header-contacts__link" href="mailto:ip.shupletsov@yandex.ru"><i class="fas fa-envelope"></i>{{ settings.email.value }}</a>
+                    <a href="./uploads/contract.doc" class="b-btn b-btn--border b-header-contacts__load" download>Скачать образец договора</a>
+                </div>
+                <div class="b-header-contacts__phone">
+                    <a class="b-header-contacts__link" href="tel:{{ settings.main_phone.value | replace({'(': '', ')': '', '-': '', ' ': ''}) }}">
+                        <i class="fas fa-phone"></i>{{ settings.main_phone.value }}</a>
+                    <a href="#" class="b-btn__send b-btn b-btn--green b-header-contacts__call"
+                       data-form-name="Обратный звонок">Обратный звонок</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>

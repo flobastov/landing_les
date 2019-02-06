@@ -1,0 +1,20 @@
+.b-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: flexy-size(medium);
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 6px;
+  line-height: 1;
+  width: 100%;
+  &--green {
+    background-color: flexy-color(green);
+    border: 1px solid flexy-color(green);
+    color: flexy-color(green2);
+  }
+  &--border {
+    border: 1px solid flexy-color(green);
+    color: flexy-color(green);
+  }
+}

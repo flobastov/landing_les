@@ -1,0 +1,228 @@
+/* Variables */
+//elem
+$eMargin: 14px 0;
+//Input
+$iHeight: 50px;
+$iPadding: 16px;
+$iBorderWidth: 1px;
+$iBorder: $iBorderWidth solid flexy-color(green1);
+$iBorderRadius: 25px;
+$iBackgroundColor: none;
+$iFontSize: 16px;
+$iColor: flexy-color(green1);
+$iLabelColor: flexy-color(green1);
+//Radio, checkbox
+$rSize: 20px;
+$rBorder: $iBorder;
+$rPadding: 23px;
+$rFontSize: flexy-size(small);
+$rColor: flexy-color(green1);
+//Textarea
+$tPadding: 18px;
+$tHeight: 100px;
+
+/* Form Styles */
+.b-form {
+  * {
+    box-sizing: border-box;
+  }
+  &__title {
+    @extend .b-content-title;
+    text-align: center;
+    color: flexy-color(green1);
+  }
+  &__desc {
+   // @extend .b-content__desc;
+  }
+  &__elem {
+    margin: $eMargin;
+  }
+}
+
+.b-input, .b-textarea {
+  position: relative;
+  padding: 0;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  &:hover:not(:focus) {
+    box-shadow: none;
+  }
+  &__field {
+    width: 100%;
+    min-height: $iHeight;
+    padding: 0 $iPadding;
+    border: $iBorder;
+    border-radius: $iBorderRadius;
+    background-color: $iBackgroundColor;
+    font-size: $iFontSize;
+    color: $iColor;
+    text-align: center;
+  }
+  &.is-active label,
+  &__field:focus ~ label {
+    color: $iLabelColor;
+    font-size: $iFontSize - 4;
+    font-weight: 300;
+    line-height: $iFontSize;
+  }
+  &__label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: all .15s;
+    cursor: text;
+    font-size: $iFontSize;
+    font-weight: 300;
+    line-height: $iHeight;
+    color: $rColor;
+    padding: 0 $iPadding;
+  }
+}
+
+.b-checkbox, .b-radio {
+  position: relative;
+  &__field {
+    opacity: 0;
+    position: absolute;
+    &:checked {
+      ~ .b-checkbox__label .b-checkbox__custom,
+      ~ .b-radio__label .b-radio__custom {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__label {
+    position: relative;
+    line-height: $rFontSize;
+    font-size: $rFontSize;
+    padding-left: $rPadding + $rSize;
+    padding-right: 0;
+    display: block;
+    color: $iColor;
+    & a {
+      color: $iColor;
+    }
+  }
+  &__custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $rSize;
+    height: $rSize;
+    border: $rBorder;
+    transition: all .15s;
+    border-radius: 2px;
+    &:before {
+      content: '\f00c';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: $rFontSize;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity .15s ease-in-out;
+      color: $rColor;
+    }
+  }
+}
+
+.b-radio {
+  &__custom {
+    border-radius: 50%;
+    &:before {
+      content: '';
+      width: 70%;
+      height: 70%;
+      border-radius: 50%;
+      background-color: $rColor;
+    }
+  }
+}
+
+.b-textarea {
+  &__field {
+    text-align: left;
+    resize: none;
+    padding: $tPadding;
+    border-radius: 15px;
+    min-height: 114px;
+  }
+  &__label {
+    text-align: left;
+    text-transform: none;
+    color: flexy-color(green1);
+    opacity: .37;
+  }
+}
+
+.b-input-submit {
+  & input {
+    width: 100%;
+    border-radius: 6px;
+    background-color: flexy-color(white);
+    padding: 12px;
+    text-align: center;
+    line-height: 1;
+    color: flexy-color(green2);
+  }
+  &--green {
+    & input {
+      background-color: flexy-color(green);
+    }
+  }
+}
+
+.b-file {
+  &__name {
+    color: flexy-color(green1);
+    transition: .2s ease-in-out;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: none;
+    line-height: 1;
+    &.is-active {
+      padding-top: 6px;
+    }
+  }
+  &__field {
+    opacity: 0;
+    width: .1px;
+    height: .1px;
+  }
+  &__label {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: flexy-color(green1);
+    font-weight: 800;
+    position: relative;
+    padding-left: 60px;
+    min-height: 45px;
+  }
+  &__icon {
+    position: absolute;
+    left: 0;
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: flexy-color(white);
+    background-color: flexy-color(green);
+    border-radius: 6px;
+  }
+}

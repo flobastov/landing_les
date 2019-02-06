@@ -1,0 +1,18 @@
+<ul>
+    <li><a href="{{ path('homepage') }}">Главная</a></li>
+    {% if menu | length > 0 %}
+        {% for item in menu %}
+            {% if item.type == 'page_link' %}
+                <li><a href="/p/{{ item.page.slug }}">{{ item.name }}</a></li>
+            {% endif %}
+
+            {% if item.type == 'external_link' %}
+                <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+            {% endif %}
+
+            {% if item.type == 'link' %}
+                <li><a href="/{{ item.link }}">{{ item.name }}</a></li>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+</ul>

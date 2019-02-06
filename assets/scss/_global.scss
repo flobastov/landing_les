@@ -1,0 +1,69 @@
+h1,.h1 {
+  @include adaptive-font(24,36,320,992)
+}
+h2,.h2 {
+  @include adaptive-font(20,24,320,992);
+}
+h3,.h3 {
+  font-size: flexy-size(large);
+}
+h4,.h4 {
+  font-size: flexy-size(medium);
+}
+h5,.h5 {
+  font-size: flexy-size(small);
+}
+h6,.h6 {
+  font-size: flexy-size(xsmall);
+}
+
+.b-space {
+  height: 30px;
+}
+
+.b-bg {
+  background: {
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  };
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.b-main-page {
+  & .b-breadcrumb {
+    display: none;
+  }
+}
+
+a, button, input[type="submit"] {
+  cursor: pointer;
+}
+
+body {
+  background-color: flexy-color(green2);
+  color: flexy-color(white);
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(to top, #004e4f 0%, #00402c 64%, rgba(0,0,0,0) 100%);
+    z-index: -1;
+  }
+}
+.b-wrapper {
+  padding-left: 36px;
+  padding-right: 36px;
+  @include flexy-breakpoint(xlarge) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

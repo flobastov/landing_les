@@ -1,0 +1,45 @@
+<section class="b-contacts" id="contacts">
+    <div class="b-wrapper b-contacts__wrapper">
+        <div class="b-space"></div>
+        <div class="b-space b-visible_medium_up"></div>
+        <div class="b-content-title b-content-title--center h1">Наши контакты</div>
+        <div class="b-space"></div>
+        <div class="b-space b-visible_medium_up"></div>
+        <div class="b-row">
+            <div class="b-col b-col_small_12 b-col_large_6">
+                <div class="b-contacts__content">
+                    <div class="b-contacts-list">
+                        <div class="b-contacts-list__title">Производство</div>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i>{{ settings.production_address.value | raw }}</li>
+                            <li><i class="fas fa-phone"></i><a href="tel:{{ settings.production_phone.value | replace({'(': '', ')': '', '-': '', ' ': ''}) }}">
+                                    {{ settings.production_phone.value }}</a></li>
+                        </ul>
+                    </div>
+                    <div class="b-map" id="production-map"></div>
+                    <div class="b-space b-hide_large_up"></div>
+                </div>
+            </div>
+            <div class="b-col b-col_small_12 b-col_large_6">
+                <div class="b-contacts__content">
+                    <div class="b-contacts-list">
+                        <div class="b-contacts-list__title">Отдел продаж</div>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i>{{ settings.sales_address.value | raw }}</li>
+                            <li>
+                                <i class="fas fa-phone"></i><a href="tel:{{ settings.sales_phone.value | replace({'(': '', ')': '', '-': '', ' ': ''}) }}">
+                                    {{ settings.sales_phone.value }}</a><br>
+                                <a href="tel:{{ settings.sales_second_phone.value | replace({'(': '', ')': '', '-': '', ' ': ''}) }}">
+                                    {{ settings.sales_second_phone.value }}</a>
+                            </li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:ip.shupletsov@yandex.ru">{{ settings.email.value }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="b-map" id="office-map"></div>
+                </div>
+            </div>
+        </div>
+        <div class="b-space"></div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+<section class="b-how" id="how">
+    <div class="b-space"></div>
+    <div class="b-space b-visible_medium_up"></div>
+    <div class="b-space b-visible_large_up"></div>
+    <div class="b-wrapper">
+        <div class="b-content-title b-content-title--center h1">Как мы работаем</div>
+        <div class="b-space"></div>
+        <div class="b-space b-visible_medium_up"></div>
+        <div class="b-space b-visible_large_up"></div>
+        <div class="b-how__row">
+            {% set items = [
+                {'icon':'edit','title':'Вы оставляете\nзаявку на сайте'},
+                {'icon':'list','title':'Уточняем\nпозиции заказа'},
+                {'icon':'track','title':'Подбираем\nвыгодный\nспособ доставки'},
+                {'icon':'calendar','title':'Согласуем\nсроки оплаты\nи дату поставки'},
+                {'icon':'package','title':'Вы получаете продукцию\nи используете ее в своих\nцелях'}
+            ] %}
+            {% for item in items %}
+            <div class="b-how-item">
+                <div class="b-how-item__icon"><i class="sprite sprite-icon-{{ item.icon }}-y"></i></div>
+                <div class="b-how-item__content">
+                    <div class="b-how-item__num">{{ loop.index }}</div>
+                    <div class="b-how-item__title">{{ item.title | striptags(true) | escape | nl2br }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="b-space b-visible_large_up"></div>
+</section>

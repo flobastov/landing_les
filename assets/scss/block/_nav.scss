@@ -1,0 +1,92 @@
+.b-nav {
+  position: fixed;
+  z-index: 99;
+  max-width: 190px;
+  top: 182px;
+  left: 0;
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    & a {
+      text-decoration: none;
+      font-size: 0;
+      display: block;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1;
+      color: flexy-color(white);
+      transition: .2s ease-in;
+      border: 1px solid flexy-color(white);
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      margin: 12px;
+      position: relative;
+      &.is-active {
+        background-color: flexy-color(orange);
+        border-color: flexy-color(orange);
+        z-index: 2;
+        &:after {
+          animation: fadeInRight 4s ease-in-out;
+        }
+      }
+      &:after {
+        content: attr(data-title);
+        font-size: 16px;
+        position: absolute;
+        top: -4px;
+        white-space: nowrap;
+        color: flexy-color(white);
+        left: 0;
+        opacity: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+      }
+    }
+  }
+  @include flexy-breakpoint(large) {
+    &__item a:hover {
+      background-color: flexy-color(orange);
+      border-color: flexy-color(orange);
+      &:after {
+        animation: fadeInRight 4s ease-in-out;
+      }
+    }
+  }
+  @include flexy-breakpoint(xxlarge) {
+    &__item {
+      & a {
+        width: auto;
+        height: auto;
+        margin: 0;
+        margin-top: -1px;
+        border-radius: 0 23px 23px 0;
+        border: {
+          top: 1px solid flexy-color(white);
+          right: 1px solid flexy-color(white);
+          bottom: 1px solid flexy-color(white);
+          left: none;
+        }
+        padding: 15px 23px;
+        font-size: 16px;
+        &:hover, &.is-active {
+          color: flexy-color(orange);
+          background: none;
+        }
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+@keyframes fadeInRight {
+  0%, 100% {
+    left: 0;
+    opacity: 0;
+  }
+  20%, 90% {
+    left: 24px;
+    opacity: 1;
+  }
+}
